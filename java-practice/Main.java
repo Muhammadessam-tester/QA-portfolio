@@ -12,20 +12,24 @@ public class Main {
         }
         return sumEvenOnly;
     }
+
     //Identifying even numbers
-    public static void evenNums(){
-        for (int i = 0; i < 10 ; i++) {
-            if ( i % 2 == 0){
-                System.out.println( i + " : even");
-            }else
-                System.out.println( i );
+    public static void evenNums() {
+        for (int i = 0; i < 10; i++) {
+            if (i % 2 == 0) {
+                System.out.println(i + " : even");
+            } else
+                System.out.println(i);
         }
     }
 
     public static void main(String[] args) {
 
-        User user = new User("muhammad","muhammad@test.com");
-        System.out.println("name : " + user.getName() + "\nemail : " + user.getEmail() );
+        User user = new User("muhammad", "muhammad@test.com");
+        System.out.println("name : " + user.getName() + "\nemail : " + user.getEmail());
+
+        Product p1 = new Product("Laptop", 1000.5);
+        System.out.println("The product : " + p1.getName() + "\nThe price : " + p1.getPrice());
 
         System.out.println("1. " + Warmp1.sleepIn(true, false));      //expected: false
         System.out.println("2. " + Warmp1.sleepIn(true, true));      //expected: true
@@ -45,7 +49,7 @@ public class Main {
         System.out.println("16. " + Array1.commonEnd(new int[]{2, 3, 5, 7}, new int[]{8, 6, 4, 7}));    //expected: true
         System.out.println("17. " + Array1.sum3(new int[]{2, 4, 6}));                   //expected: 12
         System.out.println(Array1.sameFirstLast(new int[]{2, 3, 4, 2}));           //expected: true
-        System.out.println(sumEven(new int[]{2, 3, 4, 6 , 8}));                   //expected: 20
+        System.out.println(sumEven(new int[]{2, 3, 4, 6, 8}));                   //expected: 20
         evenNums();
     }
 }
